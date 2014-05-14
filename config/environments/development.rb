@@ -37,4 +37,7 @@ Rails.application.configure do
 
   # Raises an error if parameters not explicitly permitted are found
   config.action_controller.action_on_unpermitted_parameters = :raise
+
+  # Set default URL options to allow testing on localhost
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
 end
