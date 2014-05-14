@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140514193627) do
     t.string   "author_line"
     t.string   "target_username"
     t.string   "content"
-    t.string   "is_private"
+    t.boolean  "is_private"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

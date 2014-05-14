@@ -14,7 +14,7 @@
   <body>
     <div class="row">
       <div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns">
-        <h1 class="text-center">PokeChat</h1>
+        <h1 class="text-center"><%= link_to 'PokeChat', root_path %></h1>
 
         <% flash.each do |key, message| %>
           <div data-alert class="alert-box <%= key %> radius">

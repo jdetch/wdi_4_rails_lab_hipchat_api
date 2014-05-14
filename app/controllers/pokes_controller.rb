@@ -21,6 +21,6 @@ class PokesController < ApplicationController
   private
 
   def poke_params
-    params.require(:poke).permit(:author_line, :target_username, :content)
+    params.require(:poke).permit(:author_line, :target_username, :content, :is_private)
   end
 end

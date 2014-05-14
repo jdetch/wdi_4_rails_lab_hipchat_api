@@ -1,6 +1,11 @@
 <% content_for :title, "Poke from #{@poke.author_line}" %>
 
-<h2 class="text-center"><small>Message for @<%= @poke.target_username %></small></h2>
+<h2 class="text-center">
+  <small>
+    <%= @poke.is_private ? 'Private message' : 'Message' %>
+    for @<%= @poke.target_username %>
+  </small>
+</h2>
 
 <div class="panel radius">
   <blockquote>

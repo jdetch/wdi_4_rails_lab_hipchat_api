@@ -25,6 +25,17 @@
       <%= f.text_area :content, rows: 5, placeholder: 'your message to the target' %>
     </div>
   </div>
+  <div class="row collapse">
+    <div class="small-1 columns">
+      <span class="prefix radius">
+        <%= f.check_box :is_private %>
+      </span>
+    </div>
+    <div class="small-11 columns">
+      <%= f.label :is_private, 'Send as private message', class: 'postfix radius text-left' %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
   <div class="row">
     <div class="small-12 columns">
       <%= f.button 'Poke!', type: 'submit', class: 'radius large expand' %>
