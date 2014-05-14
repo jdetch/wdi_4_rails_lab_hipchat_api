@@ -1,0 +1,33 @@
+<% content_for :title, 'PokeChat' %>
+
+<%= form_for @poke do |f| %>
+  <div class="row collapse">
+    <div class="small-2 columns">
+      <%= f.label :author_line, 'From', class: 'prefix radius' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_field :author_line, placeholder: 'any name you want' %>
+    </div>
+  </div>
+  <div class="row collapse">
+    <div class="small-2 columns">
+      <%= f.label :target_username, 'Target', class: 'prefix radius' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_field :target_username, placeholder: "your target's HipChat username" %>
+    </div>
+  </div>
+  <div class="row collapse">
+    <div class="small-2 columns">
+      <%= f.label :content, 'Content', class: 'prefix radius' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_area :content, rows: 5, placeholder: 'your message to the target' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.button 'Poke!', type: 'submit', class: 'radius large expand' %>
+    </div>
+  </div>
+<% end %>

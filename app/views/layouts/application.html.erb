@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : 'foundation-rails' %></title>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'vendor/modernizr' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns">
+        <h1 class="text-center">PokeChat</h1>
+
+        <% flash.each do |key, message| %>
+          <div data-alert class="alert-box <%= key %> radius">
+            <%= message %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

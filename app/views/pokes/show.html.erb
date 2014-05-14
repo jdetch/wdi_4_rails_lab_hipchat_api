@@ -1,0 +1,10 @@
+<% content_for :title, "Poke from #{@poke.author_line}" %>
+
+<h2 class="text-center"><small>Message for @<%= @poke.target_username %></small></h2>
+
+<div class="panel radius">
+  <blockquote>
+    <p><%= @poke.content %></p>
+    <cite><%= @poke.author_line %></cite>
+  </blockquote>
+</div>
