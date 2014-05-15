@@ -5,11 +5,14 @@ class Poke < ActiveRecord::Base
   private
 
   def send_to_hipchat
-    room_name = 'WDI Boston PokeChat'
-    client = HipChat::Client.new(ENV['HIPCHAT_API_KEY'], api_version: 'v2')
     poke_url = Rails.application.routes.url_helpers.poke_url(self)
 
-    message = "@#{target_username} got poked by #{author_line}: #{poke_url}"
-    client[room_name].send('', message, message_format: 'text')
+    if is_private
+      message = "You got poked by #{author_line}: #{poke_url}"
+      Hipchat.new.private_message(target_username, message)
+    else
+      message = "@#{target_username} got poked by #{author_line}: #{poke_url}"
+      Hipchat.new.poke_room_message(message)
+    end
   end
 end
