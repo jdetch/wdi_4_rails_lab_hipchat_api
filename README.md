@@ -4,20 +4,24 @@ We're building an app that allows "poking" people through HipChat, either public
 
 ## Step One
 
-If I choose a public poke (the default), the app should message the WDI off-topic channel like so:
+Implement public pokes. If the user leaves the "private" checkbox on the form unchecked, the app should message the WDI off-topic channel using the info submitted like so:
 
 ```
 @TargetUser got poked by AuthorLine: http://localhost:3000/pokes/1
 ```
 
-If I choose a private poke, the app should send a private message to the target user like so:
+Note the URL should be clickable and the @-mention should notify the target user.
+
+## Step Two
+
+Replace the "Target" text input with a dropdown containing the mention names of everyone currently in the WDI off-topic channel.
+
+## Step Three
+
+Implement private pokes. If the user checks the "private" checkbox on the form, the app should send a private message to the target user using the info submitted like so:
 
 ```
 You got poked by AuthorLine: http://localhost:3000/pokes/1
 ```
 
-Note that URLs should be clickable, and the @-mention for public pokes should be a "real" mention that causes a notification for the user.
-
-## Step Two
-
-Replace the "Target" text input with a dropdown containing the usernames of everyone currently in the WDI off-topic channel.
+Note that private messages can only be sent by user ID, not mention name, so you will need to implement a mention-name-to-user-ID lookup.
