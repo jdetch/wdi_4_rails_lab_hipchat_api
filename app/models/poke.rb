@@ -9,10 +9,10 @@ class Poke < ActiveRecord::Base
 
     if is_private
       message = "You got poked by #{author_line}: #{poke_url}"
-      Hipchat.new.private_message(target_username, message)
+      Poker.new.private_message(target_username, message)
     else
       message = "@#{target_username} got poked by #{author_line}: #{poke_url}"
-      Hipchat.new.poke_room_message(message)
+      Poker.new.public_message(message)
     end
   end
 end

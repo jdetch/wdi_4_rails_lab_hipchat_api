@@ -5,7 +5,7 @@ class PokesController < ApplicationController
 
   def new
     @poke = Poke.new
-    @targets = Hipchat.new.poke_target_mention_names
+    @targets = Poker.new.target_mention_names.sort
   end
 
   def create
