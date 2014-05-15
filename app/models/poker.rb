@@ -1,6 +1,6 @@
 class Poker
   def target_mention_names
-    room.get_room['participants'].map{ |user| user['mention_name'] }
+    targets.map{ |user| user['mention_name'] }
   end
 
   def public_message(message)
