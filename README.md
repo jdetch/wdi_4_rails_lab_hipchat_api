@@ -1,10 +1,10 @@
 # HipChat API Lab
 
-We're building an app that allows "poking" people through HipChat, either publicly or as a private message. Everything is already done in this repository, except for the actual HipChat integration.
+We're building an app that allows "poking" people through HipChat, either publicly or as a private message. Everything is already done in this repository, except for the actual HipChat integration. We'll be using the dedicated "PokeChat" channel, which you should have access to, to avoid spamming the off-topic channel.
 
 ## Step One
 
-Implement public pokes. If the user leaves the "private" checkbox on the form unchecked, the app should message the WDI off-topic channel using the info submitted like so:
+Implement public pokes. If the user leaves the "private" checkbox on the form unchecked, the app should message the PokeChat channel using the info submitted like so:
 
 ```
 @TargetUser got poked by AuthorLine: http://localhost:3000/pokes/1
