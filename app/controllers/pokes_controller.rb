@@ -5,6 +5,7 @@ class PokesController < ApplicationController
 
   def new
     @poke = Poke.new
+    @client = client
   end
 
   def create
