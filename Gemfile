@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'spring', group: :development
 
 gem 'foundation-rails'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'hipchat'
 
 group :development do
   gem 'pry-rails'
