@@ -14,7 +14,7 @@ Note the URL should be clickable and the @-mention should notify the target user
 
 ## Step Two
 
-Replace the "Target" text input with a dropdown containing the mention names of everyone currently in the WDI off-topic channel.
+Replace the "Target" text input with a dropdown containing the mention names of everyone currently in the PokeChat channel.
 
 ## Step Three
 
